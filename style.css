@@ -1,0 +1,183 @@
+*{
+  background: #f5f5f5;
+  color: #333;
+  font-family: "Yu Gothic Medium", "Arial", sans-serif;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 25px;
+  user-select: none;
+}
+
+input{
+  outline: none;
+  font-size: 25px;
+}
+
+textarea{
+  padding: 5px;
+  border: solid 1px #888;
+  border-radius: 5px;
+  line-height: 25px;
+  font-size: 25px;
+  resize: none;
+  outline: none;
+}
+
+textarea::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+}
+
+input[type="text"]{
+  width: 500px;
+  padding: 10px;
+  border: solid 1px #888;
+  background: #fff;
+  text-align: center;
+}
+
+input[type="button"]{
+  height: 50px;
+  width: 350px;
+  border: solid 1px #888;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .2s;
+}
+
+input[type="button"]:hover{
+  width: 365px;
+}
+
+input[type="button"]:active{
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+label{
+  cursor: pointer;
+}
+
+.hide{
+  display: none;
+}
+
+
+
+.frame{
+  display: none;
+}
+
+input:checked + .frame{
+  display: block;
+}
+
+.input-frame label{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.input-frame textarea{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 100px);
+  height: calc(100% - 100px);
+}
+
+.main-frame{
+  position: absolute;
+  top: calc(50% - 50px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.main-frame label{
+  margin: 10px 10px 0 0;
+  font-size: 14px;
+}
+
+.main-frame input, .main-frame select{
+  display: block;
+  margin: 20px auto 0;
+}
+
+.main-frame select{
+  padding: 5px 20px;
+  font-size: 20px;
+}
+
+.main-frame .result{
+  width: 400px;
+  margin: 20px 0 0 0;
+  padding: 10px;
+  border: solid 2px #55f;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.main-frame .result span{
+  display: inline-block;
+  margin: 0 0 10px 0;
+  padding: 0 10px 0 10px;
+  border-bottom: solid 1px #333;
+}
+
+.main-frame .result div{
+  display: inline-block;
+  text-align: left;
+}
+
+.main-frame .result div:empty::after{
+  content: "データがありません。";
+}
+
+.play-frame{
+  position: absolute;
+  top: calc(50% - 50px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.play-frame > div{
+  text-align: center;
+}
+
+.play-frame div:nth-of-type(2){
+  height: 30px;
+  width: 500px;
+  text-align: center;
+}
+
+.play-frame label{
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 15px;
+}
+
+.missing-frame textarea{
+  position: absolute;
+  top: calc(50% - 10px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100vw - 50px);
+  height: calc(100vh - 60px);
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.missing-frame label{
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: 20px;
+  background: none;
+}

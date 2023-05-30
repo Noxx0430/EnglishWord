@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>英単語</title>
+  </head>
+  <body>
+    <input type="radio" name="radio" class="hide" id="mainFrameRadio" checked>
+    <div class="frame main-frame">
+      <input type="button" data-state="1" value="英単語タイピングを始める" onclick="start()">
+      <input type="button" data-state="2" value="和 → 英を始める" onclick="start()">
+      <select id="groupSelect"></select>
+      <div class="result">
+        <span>前回の成績</span><br>
+        <div id="result"></div>
+      </div>
+      <label for="inputFrameRadio">設定</label>
+      <label for="missingFrameRadio">間違えた問題</label>
+    </div>
+
+    <input type="radio" name="radio" class="hide" id="playFrameRadio">
+    <div class="frame play-frame">
+      <div id="problem"></div>
+      <input type="text" id="answer" autocomplete="off">
+      <div id="hint"></div>
+      <label for="mainFrameRadio" onclick="reset()">やめる</label>
+    </div>
+
+    <input type="radio" name="radio" class="hide" id="inputFrameRadio">
+    <div class="frame input-frame">
+      <label for="mainFrameRadio" onclick="setOption()">戻る</label>
+      <textarea id="inputForm"></textarea>
+    </div>
+
+    <input type="radio" name="radio" class="hide" id="missingFrameRadio">
+    <div class="frame missing-frame">
+      <textarea id="missing"></textarea>
+      <label for="mainFrameRadio">戻る</label>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
